@@ -1,0 +1,357 @@
+/* carChoose (begin) */
+.carChoose {
+	position: relative;
+	margin: 0 auto;
+	z-index: 10;
+
+	border-radius: 20px;
+	width: 1040px;
+	padding: 40px;
+	background: #fff;
+	box-shadow: 0 10px 30px #666;
+}
+.carChoose h1 {
+	margin: 0 0 50px;
+
+	font: bold 55px tahoma;
+}
+/* carChoose (end) */
+
+/* chooseSteps (begin) */
+.chooseSteps {
+	text-align: center;
+}
+.chooseSteps .step {
+	position: relative;
+	margin: 0 20px;
+
+	display: inline-block;
+	border: 3px solid #3377ff;
+	border-radius: 6px;
+	width: 280px;
+	height: 100px;
+	cursor: pointer;
+	z-index: 2;
+	
+	line-height: 100px;
+	
+	text-align: center;
+}
+.chooseSteps .step.disabled {
+	border-color: #dae0e5;
+	cursor: default;
+	z-index: 1;
+}
+.chooseSteps .step .legend {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin: -19px 0 0 -19px;
+
+	border-radius: 100%;
+	background: #3377ff;
+	width: 38px;
+	height: 38px;
+	
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	line-height: 38px;
+}
+.chooseSteps .step.disabled .legend {
+	background: #dae0e5;
+}
+.chooseSteps .button {
+	position: relative;
+	top: 3px;
+	
+	max-width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	
+	text-overflow: ellipsis;
+}
+.chooseSteps .step.disabled .choose-button {
+	border-radius: 0;
+	background: none;
+	box-shadow: 0 0 0;
+	cursor: default;
+	
+	color: #b8b8b8;
+}
+.chooseSteps .step .divider {
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	margin: -16px 0 0 15px;
+
+	vertical-align: middle;
+
+	width: 18px;
+	height: 33px;
+	background: url(../i/i.png) no-repeat 0 -29px;
+}
+.chooseSteps .step.done {}
+.chooseSteps .step.done .legend {
+	background-image: url(../i/i.png);
+	background-position: right 0;
+	
+	text-indent: -99999px;
+}
+.chooseSteps .step.done .divider {
+	background-position: 0 -62px;
+}
+.chooseSteps .popup {
+	top: 0;
+	left: 50%;
+	margin: -170px 0 0 -170px;
+	
+	display: none;
+	border-radius: 5px;
+	background: #fbfbfb;
+	width: 300px;
+}
+.chooseSteps .step.open .popup  {
+	display: block;
+}
+.chooseSteps .popup h3 {
+	margin: 0 0 10px;
+
+	font-size: 18px;
+	font-weight: bold;
+}
+.chooseSteps .popup .f-search {
+	position: relative;
+	margin: 0 -5px 15px;
+	
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	background: #fff;
+	
+	padding: 10px 10px 10px 35px;
+}
+.chooseSteps .popup .f-search .i {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	margin: -8px 0 0;
+}
+.chooseSteps .popup .f-search input {
+	border: 0;
+	background: none;
+	width: 100%;
+	height: auto;
+	
+	
+	font: 14px trebuchet ms;
+}
+.chooseSteps .popup ul {}
+.chooseSteps .popup ul + ul {
+	margin: 25px 0 0;
+}
+.chooseSteps .popup ul li {
+	position: relative;
+	margin: 5px -10px 0;
+
+	border-radius: 13px;
+	padding: 0 10px;
+	cursor: pointer;
+	
+	font-size: 16px;
+	line-height: 25px;
+}
+.chooseSteps .popup ul li:hover {
+	background: #3378ff;
+	background: -webkit-gradient(linear, left top, #2691ff, #3378ff);
+	background: -moz-linear-gradient(top, #2691ff, #3378ff);
+	background: linear-gradient(top, #2691ff, #3378ff);
+	
+	color: #fff;
+}
+.chooseSteps .popup ul li img {
+	position: absolute;
+	left: -35px;
+	top: 5px;
+}
+.chooseSteps .popup ul.carmake {
+	margin-left: 40px;
+}
+.chooseSteps .popup ul li.optName {
+	background: none;
+	cursor: default;
+
+	font-weight: bold;
+	color: #000;
+}
+.chooseSteps .popup h2 {
+	margin: 0 0 15px;
+
+	font-size: 28px;
+	font-weight: normal;
+	
+	text-align: center;
+}
+.chooseSteps .buttons {
+	margin: 40px 0 0;
+
+	text-align: center;
+}
+/* chooseSteps (end) */
+
+/* carChooseStep (begin) */
+.carChooseStep {
+	margin: 0 auto;
+
+	width: 800px;
+}
+.carChooseStep h1 {
+	margin-bottom: -5px;
+}
+.carChooseStep h2 {
+	margin-bottom: 65px;
+	
+	text-align: center;
+}
+.carChooseStep.step1 .l-col,
+.carChooseStep.step1 .r-col {
+	width: 400px;
+}
+.carChooseStep label {
+	font-size: 17px;
+}
+.carChooseStep textarea {
+	margin: 5px 0 0;
+
+	width: 398px;
+}
+.carChooseStep .b-button {
+	padding: 0 35px;
+}
+.carChooseStep .b-button .i {
+	margin: -4px 0 0 10px;
+}
+.carChooseStep .buttons {
+	margin: 70px 0 0;
+
+	text-align: center;
+}
+.carChooseStep.step1 fieldset {
+	line-height: 35px;
+}
+.carChooseStep.step1 fieldset .l-col {
+	width: 140px;
+	
+	text-align: right;
+}
+.carChooseStep fieldset b {
+	font-size: 17px;
+}
+.carChooseStep.step1 fieldset .r-col {
+	width: 240px;
+}
+.carChooseStep select {
+	width: 190px;
+}
+.carChooseStep select.year {
+	width: 65px;
+}
+.carChooseStep.step2 .name {}
+.carChooseStep.step2 .l-col {
+	width: 380px;
+}
+.carChooseStep.step2 .r-col {
+	position: relative;
+
+	float: 400px;
+}
+.carChooseStep.step2 .name input {
+	width: 348px;
+	height: 45px;
+
+	font-size: 24px;
+	color: #696969;
+}
+.carChooseStep.step2 .name input.lname {
+	width: 358px;
+}
+.carChooseStep.step2 h2 {
+	margin-bottom: 45px;
+}
+.carChooseStep.step2 .personalData {}
+.carChooseStep.step2 .email {
+	width: 368px;
+	height: 35px;
+	padding: 0 15px;
+	
+	font-size: 17px;
+	line-height: 35px;
+}
+.carChooseStep.step2 .r-col label {
+	position: absolute;
+	top: 0;
+	right: 100%;
+	margin: 0 20px 0 0;
+	
+	white-space: nowrap;
+	
+	line-height: 37px;
+}
+.carChooseStep.step2 .personalData {
+	margin: 30px 0 0;
+}
+.carChooseStep.step2 .phone .input-box {
+	position: relative;
+	margin: 0 0 0 10px;
+	
+	display: inline-block;
+	
+	line-height: 37px;
+}
+.carChooseStep.step2 .phone .input-box .hint {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+
+	font-size: 10px;
+	color: #999;
+	line-height: normal;
+}
+.carChooseStep.step2 .phone .input-box .mask {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	
+	color: #bfbfbf;
+	line-height: 37px;
+}
+.carChooseStep.step2 .phone input {
+	width: 120px;
+	height: 35px;
+	padding: 0 15px 0 45px;
+    line-height: 35px;
+	font-size: 17px;
+}
+.carChooseStep.step2 .captcha {
+	margin: 25px 0 0;
+
+	padding: 20px 0;
+	background: #fffbcc;
+	box-shadow: 0 1px 1px #9f9850;
+	
+	font-size: 17px;
+
+	text-align: center;
+}
+.carChooseStep.step2 .captcha img {
+	vertical-align: middle;
+}
+.carChooseStep.step2 .captcha input {
+	vertical-align: middle;
+	
+	width: 110px;
+	height: 36px;
+	padding: 0 10px;
+	
+	line-height: 36px;
+}
+/* carChooseStep (end) */

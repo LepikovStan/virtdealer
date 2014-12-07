@@ -1,0 +1,118 @@
+/* button (begin) */
+.button {
+	vertical-align: middle;
+
+	display: inline-block;
+	border-radius: 5px;
+	background: #f5f5f5;
+	background: -webkit-gradient(linear, left top, #f7f7f7, #f3f3f3);
+	background: -moz-linear-gradient(top, #f7f7f7, #f3f3f3);
+	background: linear-gradient(top, #f7f7f7, #f3f3f3);
+	box-shadow: 0 1px 1px #c5c5c5;
+	cursor: pointer;
+	
+	color: #000;
+	
+	text-decoration: none;
+}
+.button:hover {
+	color: #000;
+}
+.button.button-size-m {
+	padding: 0 20px;
+	
+	font-size: 18px;
+	line-height: 40px;
+}
+.button.button-size-s {
+	font-size: 14px;
+	line-height: 30px;
+}
+/* button (end) */
+
+/* b-button (begin) */
+.b-button {
+	background: #0b88ff;
+	background: -webkit-gradient(linear, left top, #0097ff, #0081ff);
+	background: -moz-linear-gradient(top, #0097ff, #0081ff);
+	background: linear-gradient(top, #0097ff, #0081ff);
+	border: 1px solid transparent;
+	border-bottom: 1px solid #4074c8; 
+	display: inline-block;
+	cursor: pointer;
+	
+	color: #fff;
+	
+	text-decoration: none;
+	text-shadow: 0 -1px 0 #1577cc;
+}
+.b-button:hover {
+	background: #1a99ff;
+	background: -webkit-gradient(linear, left top, #1aa2ff, #1a8eff);
+	background: -moz-linear-gradient(top, #1aa2ff, #1a8eff);
+	background: linear-gradient(top, #1aa2ff, #1a8eff);
+	
+	color: #fff;
+}
+.b-button:active {
+	background: #0097ff;
+	border-color: transparent;
+	
+	color: #a3cdff;
+}
+
+.b-button.b-button-size-s {
+	box-shadow: 0 1px 0 #4074c8;
+	border-radius: 20px;
+	padding: 0 30px;
+	height: 26px;
+	
+	font-size: 14px;
+	line-height: 26px;
+}
+.b-button.b-button-size-s:active {
+	box-shadow: inset 0 2px 4px #005dba;
+}
+.b-button.b-button-size-s[disabled] {
+	background: #f7f7f7;
+	border: 1px solid #ccc;
+	
+	color: #999;
+}
+
+.b-button.b-button-size-m {
+	box-shadow: 0 2px 1px #1c4d9b;
+	border-radius: 23px;
+	padding: 0 30px;
+	height: 50px;
+	
+	font-size: 25px;
+	line-height: 46px;
+}
+.b-button.b-button-size-m:active {
+	box-shadow: inset 0 4px 8px #005dba;
+}
+
+.b-button[disabled],
+.b-button.b-button-size-s[disabled],
+.b-button.b-button-size-m[disabled] {
+	background: #f7f7f7;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 0;
+	cursor: default;
+	
+	color: #999;
+	
+	text-shadow: 0 0;
+}
+
+.b-button .i {
+	margin: 0 0 0 10px;
+}
+.b-button:active .i {
+	background-position: -86px 0;
+}
+.b-button[disabled] .i {
+	background-position: -93px 0;
+}
+/* b-button (end) */

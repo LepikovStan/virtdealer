@@ -1,0 +1,43 @@
+/* offer-dealer-continue (begin) */
+.offer-dealer-continue .offer-dealer-list th.options {
+	width: 310px;
+}
+.offer-dealer-continue .offer-dealer-list td.options {
+	width: 275px;
+}
+.offer-dealer-continue .offer-dealer-list .price {
+	width: 145px;
+}
+.offer-dealer-continue .offer-dealer-list .dealerprice {
+	width: 175px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background: #fffbcc;
+}
+.offer-dealer-continue .offer-dealer-list tfoot .price {
+	width: 420px;
+}
+.offer-dealer-continue .offer-dealer-total-price {
+	padding-left: 490px;
+}
+.offer-dealer-continue .offer-dealer-list th .price-num {
+	line-height: 40px;
+}
+.offer-dealer-continue .offer-dealer-list th.dealerprice .price-num {
+	font-weight: bold;
+	font-size: 30px;
+	letter-spacing: -2px;
+}
+.offer-dealer-continue .offer-dealer-list .profit {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.offer-dealer-continue .offer-dealer-list th.profit .price-num {
+	font-weight: bold;
+	font-size: 18px;
+	color: #cc2929;
+}
+.offer-dealer-continue .offer-dealer-list .check {
+	width: 40px;
+}
+/* offer-dealer-continue (end) */

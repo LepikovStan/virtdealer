@@ -1,0 +1,66 @@
+/* brands (begin) */
+.brands {}
+.brands .actions {
+	margin: -10px 0 30px;
+
+	font-size: 16px;
+	
+	text-align: center;
+}
+.brands .actions span {
+	cursor: pointer;
+
+	color: #006aff;
+}
+.brands .actions .divider {
+	margin: 0 15px;
+	
+	cursor: default;
+
+	color: #c9c9c9;
+}
+/* brands (end) */
+
+/* brands-list (begin) */
+.brands-list-container {
+	overflow: hidden;
+	max-height: 540px;
+}
+.brands-list {
+	overflow: hidden;
+}
+.brands-list .l-col {
+	width: 205px;
+}
+.brands-list .l-col + .l-col {
+	margin: 0 0 0 35px;
+}
+.brands-list .cols {
+	width: 1000px;
+}
+.brands-list dl {
+	position: relative;
+	
+	padding: 10px 0 0 40px;
+	
+	font-size: 14px;
+}
+.brands-list dl dt {
+	position: absolute;
+	left: 0;
+	top: -5px;
+	
+	font-size: 34px;
+	color: #ccc;
+}
+.brands-list dl dd {
+	margin: 0 0 10px;
+}
+.brands-list dl dd input {
+	margin: 0 10px 0 0;
+	vertical-align: middle;
+}
+.brands-list dl + dl {
+	margin: 20px 0 0;
+}
+/* brands-list (end) */

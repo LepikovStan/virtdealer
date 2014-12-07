@@ -1,0 +1,144 @@
+/* offer-dealer (begin) */
+.offer-dealer {
+	margin: 0 auto;
+
+	width: 880px;
+}
+.offer-dealer h1 ,
+.offer-dealer .h1-head{
+	margin: 0 0 20px;
+
+	font-size: 40px;
+}
+.offer-dealer h2 {
+	font-size: 20px;
+	
+	text-align: center;
+}
+.offer-dealer-head {
+	position: relative;
+	margin: 0 0 30px;
+}
+.offer-dealer-head.striked:before {
+	content: '';
+	
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin: 1px 0 0;
+	
+	width: 100%;
+	height: 1px;
+	background: #f0f0f0;
+}
+.offer-dealer-head.striked span {
+	position: relative;
+	z-index: 2;
+
+	background: #fff;
+	padding: 0 15px;
+}
+.offer-dealer .pager {
+	margin: 0 -40px 20px;
+}
+.offer-dealer .message {
+	margin: 0 0 20px;
+
+	background: #f8f8f8;
+	padding: 10px 15px;
+	border-radius: 3px;
+	
+	font-size: 14px;
+}
+.offer-dealer .buttons {
+	position: relative;
+	margin: 20px 0 0;
+
+	overflow: hidden;
+	padding: 0 0 5px;
+	min-height: 30px;
+	
+	text-align: center;
+}
+.offer-dealer .buttons .button {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin: -15px 0 0;
+
+	border-radius: 15px;
+	padding: 0 15px;
+	
+	text-align: center;
+}
+.offer-dealer .submit {
+	padding: 0 30px;
+}
+.offer-dealer .button.close {
+	left: auto;
+	right: 0;
+	
+	color: #cc2929;
+}
+.offer-dealer .button.allocate {
+	color: #cc2929;
+}
+.offer-dealer .or {
+	margin: 30px 0;
+
+	color: #9b9b9b;
+	font-size: 16px;
+	
+	text-align: center;
+}
+.offer-dealer .striked {
+	position: relative;
+}
+.offer-dealer .striked:before {
+	content: '';
+	
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin: 1px 0 0;
+	
+	width: 100%;
+	height: 1px;
+	background: #f0f0f0;
+}
+.offer-dealer .striked span {
+	position: relative;
+	z-index: 2;
+
+	padding: 0 10px;
+	background: #fff;
+}
+.offer-dealer .button.center {
+	position: static;
+	margin: 3px 0 0;
+}
+.offer-dealer .button.right {
+	left: auto;
+	right: 0;
+}
+.offer-dealer .dealer-name {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin: -15px 0 0;
+
+	background: #f7f7f7;
+	border-radius: 3px;
+	padding: 0 10px;
+	
+	font-size: 16px;
+	color: #888;
+	line-height: 30px;
+}
+.offer-dealer .write-msg{}
+.offer-dealer .write-msg textarea {
+	width: 100%;
+	height: 85px;
+	box-shadow: 0 0 0;
+}
+/* offer-dealer (end) */
