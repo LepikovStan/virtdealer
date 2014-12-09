@@ -8,6 +8,7 @@
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
-    "grunt-remove-logging": "latest"
+    "grunt-remove-logging": "latest",
+    "bower": "latest"
   }
 }
