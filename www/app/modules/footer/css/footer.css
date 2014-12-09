@@ -1,0 +1,24 @@
+/* p-footer (begin) */
+.p-footer {
+	margin: 35px auto 80px;
+
+	border-top: 1px solid #ccc;
+	width: 1120px;
+	padding: 35px 0 0;
+
+	font-size: 14px;
+	color: #7f7f7f;
+	
+	text-align: center;
+}
+.p-footer a {
+	color: #7f7f7f;
+}
+.p-footer ul {
+	margin: 20px 0 0;
+}
+.p-footer ul li {
+	display: inline;
+	margin: 0 10px;
+}
+/* p-footer (end) */

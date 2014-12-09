@@ -1,0 +1,169 @@
+/* header (begin) */
+header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	
+	height: 90px;
+	width: 100%;
+	z-index: 100;
+	
+	background: #eeedea;
+}
+.main-header {
+	background: #c4c3a6 url(../i/head.png) no-repeat center 0;
+}
+header .wrapper {
+	height: 90px;
+}
+header.h {
+	background: #f8f8f8;
+}
+header.h,
+header.h .wrapper {
+	height: 130px;
+}
+header.h .wrapper {
+	overflow: visible;
+}
+header.h .wrapper:after {
+	content: '';
+	
+	position: absolute;
+	bottom: 0;
+	left: -60px;
+	
+	width: 1120px;
+	border-top: 1px solid #dfdfdf;
+}
+header .askquestion {
+	position: absolute;
+	top: 50%;
+	left: 260px;
+	margin: -21px 0 0;
+}
+header .logo {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -28px;
+}
+header .top-menu.t-r {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin: -10px 0 0;
+}
+header .top-menu.t-c {
+	position: absolute;
+	left: 320px;
+	top: 50%;
+	margin: -10px 0 0;
+}
+header .top-menu.t-r.personal-menu {
+	margin-top: -9px;
+}
+.main-header  .top-menu.t-r {
+	margin: -14px 0 0;
+}
+header.hidden {
+	visibility: hidden;
+}
+header.hide {
+	display: none;
+}
+header.fixed {
+	position: fixed;
+	left: 0;
+	top: 0;
+	
+	width: 100%;
+	z-index: 100;
+}
+/* header (end) */
+
+/* logo (begin) */
+.logo {}
+.logo img {
+	display: block;
+}
+/* logo (end) */
+
+/* askquestion (begin) */
+.askquestion {
+	position: relative;
+	padding: 10px 10px 10px 43px;
+	
+	border: 1px solid #908f75;
+	border-radius: 10px;
+
+	font-size: 17px;
+	font-weight: bold;
+	color: #000;
+	
+	text-decoration: none;
+}
+.askquestion:hover {
+	color: #000;
+}
+.askquestion .i {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	margin-top: -12px;
+}
+/* askquestion (end) */
+
+/* top-menu (begin) */
+.top-menu li {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0 0 25px;
+	
+	font-size: 17px;
+}
+.top-menu.t-c li {
+	margin: 0 0 0 35px;
+}
+.top-menu li:first-child {
+	margin: 0;
+}
+.top-menu li a {
+	border-bottom: 1px solid #afb190;
+
+	color: #000;
+
+	text-decoration: none;
+}
+.top-menu li a:hover {
+	border-color: #000;
+}
+.top-menu .personal {
+	display: inline-block;
+	padding: 0 15px;
+	vertical-align: middle;
+
+	border: 0;
+	border-radius: 15px;
+	background: #fff;
+	box-shadow: 0 1px 2px #929289;
+	
+	font-size: 14px;
+	line-height: 30px;
+}
+.top-menu sup {
+	position: absolute;
+	margin: -2px 0 0 2px;
+	
+	border-radius: 50%;
+	background: #4191ff;
+	width: 13px;
+
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 13px;
+	color: #fff;
+	
+	text-align: center;
+}
+/* top-menu (end) */

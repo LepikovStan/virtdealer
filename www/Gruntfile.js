@@ -32,21 +32,21 @@ module.exports = function (grunt) {
                 dest: 'dest/_vendor.js'  // куда класть файл, который получиться после процесса конкатенации б*/
 				files: {
 					/* js */
-					'app/js/dest/_vendor.js': [
+					'app/dest/js/_vendor.js': [
 						'bower_components/angular/angular.js',
 						'bower_components/angular-route/angular-route.js',
 						'bower_components/angular-ui-router/release/angular-ui-router.js'
 					],
 					
 					/* css */
-					'app/css/dest/_main.css': [
-						'app/css/common.css',
-						'app/css/header.css',
-						'app/css/topmenu.css',
-						'app/css/askquestion.css',
-						'app/css/carchoose.css',
-						'app/css/history.css',
-						'app/css/comments.css'
+					'app/dest/css/_common.css': [
+						'app/css/modules/common.css',
+						//'app/css/modules/header.css',
+						//'app/css/modules/topmenu.css',
+						//'app/css/modules/askquestion.css',
+						//'app/css/modules/carchoose.css',
+						//'app/css/modules/history.css',
+						//'app/css/modules/comments.css'
 						/*
 						'app/css/login.css'
 						'app/css/reg.css'
@@ -75,8 +75,8 @@ module.exports = function (grunt) {
             },
  
             build: {
-                src: 'app/js/dest/_vendor.js',  // какой файл минифицировать
-                dest: 'app/js/dest/_vendor.min.js' // куда класть файл, который получиться после процесса минификации
+                src: 'app/dest/js/_vendor.js',  // какой файл минифицировать
+                dest: 'app/dest/js/_vendor.min.js' // куда класть файл, который получиться после процесса минификации
             }
         },
  
@@ -102,6 +102,23 @@ module.exports = function (grunt) {
                 tasks: ['cssmin'] //при их изменении запускать следующую задачу
             }
         },
+		
+		copy: {
+			main: {
+				files: [
+					{
+						expand: true,
+						cwd: 'app/modules',
+						src: [
+							'*.png',
+							'*.jpg',
+							'*.gif'
+						],
+						dest: 'app/dest/i/'
+					}
+				]
+			}
+		},
  
  
         //removelogging: { //описываем работу плагина удаления логов
@@ -115,15 +132,16 @@ module.exports = function (grunt) {
     });
  
     //подгружаем необходимые плагины
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+    //grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-remove-logging');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    //grunt.loadNpmTasks('grunt-contrib-cssmin');
+    //grunt.loadNpmTasks('grunt-contrib-watch');
+    //grunt.loadNpmTasks('grunt-remove-logging');
  
  
     //регистрируем задачу 
-    grunt.registerTask('default', ['concat', 'uglify']); //задача по умолчанию, просто grunt
+    grunt.registerTask('default', ['concat', 'uglify', 'copy']); //задача по умолчанию, просто grunt
     grunt.registerTask('test', ['']); //пока пусто, но кто знает, возможно в следующих уроках мы этим воспользуемся <img src="http://loftblog.ru/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley"> 
 };
