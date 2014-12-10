@@ -11,6 +11,7 @@
     "grunt-contrib-clean": "latest",
     "grunt-contrib-copy": "latest",
     "grunt-remove-logging": "latest",
-    "bower": "latest"
+    "bower": "latest",
+    "underscore": "latest"
   }
 }

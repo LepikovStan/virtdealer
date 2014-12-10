@@ -1,4 +1,23 @@
 module.exports = function (grunt) {
+	var _ = require('underscore'),
+		modules = [
+			'common',
+			'header',
+			'carchoose',
+			'comments',
+			'footer'
+		],
+		copyImages = [];
+	
+	_.each(modules, function(module) {
+		copyImages.push({
+			expand: true,
+			cwd: 'app/modules/'+module+'/i/',
+			src: ['*.png', '*.gif', '*.jpeg', '*.jpg'],
+			dest: 'app/dest/i/'
+		});
+	}); 
+
     //описываем конфигурацию
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'), //подгружаем package.json, чтобы использовать его данные
@@ -43,14 +62,11 @@ module.exports = function (grunt) {
                     ],
 
 					/* css */
-					'app/dest/css/_common.css': [
+					'app/dest/css/_main.css': [
 						'app/modules/common/css/common.css',
-						//'app/css/modules/header.css',
-						//'app/css/modules/topmenu.css',
-						//'app/css/modules/askquestion.css',
-						//'app/css/modules/carchoose.css',
-						//'app/css/modules/history.css',
-						//'app/css/modules/comments.css'
+						'app/modules/header/css/header.css',
+						'app/modules/carchoose/css/carchoose.css',
+						'app/modules/comments/css/comments.css'
 						/*
 						'app/css/login.css'
 						'app/css/reg.css'
@@ -107,28 +123,11 @@ module.exports = function (grunt) {
             }
         },
 
-		//copy: {
-		//	main: {
-		//		files: [
-		//			{
-		//				expand: true,
-		//				cwd: 'app/modules',
-		//				src: ['/**/*.png', '/**/*.gif','/**/*.jpg'],
-		//				dest: 'app/dest/i/'
-		//			}
-		//		]
-		//	}
-		//},
-
-
-        //removelogging: { //описываем работу плагина удаления логов
-        //    dist: {
-		//		src: "dest/_vendor.min.js", // файл который надо отчистить от console.log
-		//		dest: "dest/_vendor.clean.js" // выходной файл, который получим после очистки
-        //    }
-        //}
-
-
+		copy: {
+			main: {
+				files: copyImages
+			}
+		}
     });
 
     //подгружаем необходимые плагины
@@ -143,6 +142,6 @@ module.exports = function (grunt) {
 
 
     //регистрируем задачу
-    grunt.registerTask('default', ['clean', 'concat', 'uglify']); //задача по умолчанию, просто grunt
+    grunt.registerTask('default', ['clean', 'concat', 'uglify', 'copy']); //задача по умолчанию, просто grunt
     grunt.registerTask('test', ['']); //пока пусто, но кто знает, возможно в следующих уроках мы этим воспользуемся <img src="http://loftblog.ru/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley">
 };

@@ -26,11 +26,16 @@ myApp.controller('MainCtrl',
             'comments',
             'footer'
         ];
-
-        $scope.templates = {};
+		
+        angular.extend($scope, {
+			modules: {},
+		});
 
         angular.forEach(tmpl, function(template) {
-            $scope.templates[template] = 'app/modules/'+template+'/templates/'+template+'.htm';
+            $scope.modules[template] = {
+				src: 'app/modules/'+template,
+				template: 'app/modules/'+template+'/templates/'+template+'.htm',
+			}
         });
     }
 );

@@ -1,3 +1,2 @@
-www/bower_components/
-www/node_modules/
-www/app/dest/
+www/bower_components
+www/node_modules
