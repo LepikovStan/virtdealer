@@ -107,18 +107,18 @@ module.exports = function (grunt) {
             }
         },
 
-		copy: {
-			main: {
-				files: [
-					{
-						expand: true,
-						cwd: 'app/modules',
-						src: ['**/*.png', '**/*.gif','**/*.jpg'],
-						dest: 'app/dest/i/'
-					}
-				]
-			}
-		},
+		//copy: {
+		//	main: {
+		//		files: [
+		//			{
+		//				expand: true,
+		//				cwd: 'app/modules',
+		//				src: ['/**/*.png', '/**/*.gif','/**/*.jpg'],
+		//				dest: 'app/dest/i/'
+		//			}
+		//		]
+		//	}
+		//},
 
 
         //removelogging: { //описываем работу плагина удаления логов
@@ -143,6 +143,6 @@ module.exports = function (grunt) {
 
 
     //регистрируем задачу
-    grunt.registerTask('default', ['clean', 'concat', 'uglify', 'copy']); //задача по умолчанию, просто grunt
+    grunt.registerTask('default', ['clean', 'concat', 'uglify']); //задача по умолчанию, просто grunt
     grunt.registerTask('test', ['']); //пока пусто, но кто знает, возможно в следующих уроках мы этим воспользуемся <img src="http://loftblog.ru/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley">
 };

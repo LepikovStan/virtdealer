@@ -22,7 +22,7 @@ myApp.controller('MainCtrl',
     function($scope) {
         var tmpl = [
             'header',
-            'carChoose',
+            'carchoose',
             'comments',
             'footer'
         ];
