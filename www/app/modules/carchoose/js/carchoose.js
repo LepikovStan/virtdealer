@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 /* Controllers */
 myApp.controller('CarChooseCtrl',
@@ -82,25 +82,35 @@ myApp.controller('CarChooseCtrl',
             $scope.bindBodyClick('click.' + step, e.target, function() {
                 $scope[step + 'class'] = 'step';
             });
-        }
+        };
 
         $scope.openChooseBrandPopup = function(e) {
             openChoosePopup(e, 'step1');
-        }
+        };
 
         $scope.chooseBrand = function(e) {
+			var brandName = e.target.dataset.name,
+				brandVal = e.target.dataset.val;
+		
             enabledSteps.push('step2');
             $scope.step1class = 'step';
             $scope.step2class = 'step';
-            $scope.carBrandTitle = e.target.dataset.name;
-            $scope.carBrandId = e.target.dataset.val;
-        }
+			
+			if ($scope.carBrandTitle !== brandName && $scope.carMakeTitle !== 'Выбрать модель') {
+				enabledSteps = ['step1', 'step2'];
+				$scope.step3class = 'step disabled';
+				$scope.carMakeTitle = 'Выбрать модель'
+			}
+			
+			$scope.carBrandTitle = brandName;
+			$scope.carBrandId = brandVal;
+        };
 
         $scope.openChooseModelPopup = function(e) {
             openChoosePopup(e, 'step2');
 
             $scope.carMakes = carMakes[$scope.carBrandTitle];
-        }
+        };
 
         $scope.chooseMake = function(e) {
             enabledSteps.push('step3');
@@ -108,16 +118,16 @@ myApp.controller('CarChooseCtrl',
             $scope.step3class = 'step';
             $scope.carMakeTitle = e.target.dataset.name;
             $scope.carMakeId = e.target.dataset.val;
-        }
+        };
 
         $scope.openChooseRegionPopup = function(e) {
             openChoosePopup(e, 'step3');
-        }
+        };
 
         $scope.chooseRegion = function(e) {
             $scope.step3class = 'step';
             $scope.carRegionTitle = e.target.dataset.name;
             $scope.carRegionId = e.target.dataset.val;
-        }
+        };
     }
 );
