@@ -8,7 +8,7 @@ module.exports = function (grunt) {
 			'footer'
 		],
 		copyImages = [];
-	
+
 	_.each(modules, function(module) {
 		copyImages.push({
 			expand: true,
@@ -16,7 +16,7 @@ module.exports = function (grunt) {
 			src: ['*.png', '*.gif', '*.jpeg', '*.jpg'],
 			dest: 'app/dest/i/'
 		});
-	}); 
+	});
 
     //описываем конфигурацию
     grunt.initConfig({
@@ -53,12 +53,14 @@ module.exports = function (grunt) {
 				files: {
 					/* js */
 					'app/dest/js/_vendor.js': [
+                        'bower_components/jquery/dist/jquery.min.js',
 						'bower_components/angular/angular.js',
 						'bower_components/angular-route/angular-route.js',
 						'bower_components/angular-ui-router/release/angular-ui-router.js'
 					],
                     'app/dest/js/_modules.js': [
-                        'app/modules/common/js/common.js'
+                        'app/modules/common/js/common.js',
+                        'app/modules/carchoose/js/carchoose.js'
                     ],
 
 					/* css */
@@ -66,7 +68,8 @@ module.exports = function (grunt) {
 						'app/modules/common/css/common.css',
 						'app/modules/header/css/header.css',
 						'app/modules/carchoose/css/carchoose.css',
-						'app/modules/comments/css/comments.css'
+						'app/modules/comments/css/comments.css',
+                        'app/modules/footer/css/footer.css'
 						/*
 						'app/css/login.css'
 						'app/css/reg.css'

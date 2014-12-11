@@ -9,24 +9,27 @@ var myApp = angular
         $routeProvider
             .when('/', {
                 templateUrl: 'app/modules/common/templates/main.htm',
-                controller: 'MainCtrl'
+                //controller: 'MainCtrl'
             })
             .when('/askquestion', {
                 templateUrl: 'app/modules/common/templates/askquestion.htm',
-                controller: 'MainCtrl'
+                //controller: 'MainCtrl'
             });
 }]);
 
 /* Controllers */
 myApp.controller('MainCtrl',
-    function($scope) {
+    function($scope, $location) {
         var tmpl = [
-            'header',
-            'carchoose',
-            'comments',
-            'footer'
-        ];
-		
+                'header',
+                'carchoose',
+                'comments',
+                'footer'
+            ],
+            title = {
+                '/': 'virtdealer'
+            };
+
         angular.extend($scope, {
 			modules: {},
 		});
@@ -37,5 +40,22 @@ myApp.controller('MainCtrl',
 				template: 'app/modules/'+template+'/templates/'+template+'.htm',
 			}
         });
+
+        $scope.bindBodyClick = function(event, target, cb) {
+            $('body').on(event, function(e) {
+                var $target = $(e.target);
+
+                if ($target[0] !== target && !$target.closest('.popup').length) {
+                    if ($.isFunction(cb)) {
+                        cb();
+                    }
+                    $scope.$apply();
+
+                    $('body').off(event);
+                }
+            });
+        };
+
+        document.title = title[$location.$$path];
     }
 );

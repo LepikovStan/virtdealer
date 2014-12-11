@@ -32,9 +32,9 @@
 	height: 100px;
 	cursor: pointer;
 	z-index: 2;
-	
+
 	line-height: 100px;
-	
+
 	text-align: center;
 }
 .chooseSteps .step.disabled {
@@ -52,7 +52,7 @@
 	background: #3377ff;
 	width: 38px;
 	height: 38px;
-	
+
 	font-size: 18px;
 	font-weight: bold;
 	color: #fff;
@@ -64,19 +64,22 @@
 .chooseSteps .button {
 	position: relative;
 	top: 3px;
-	
+
 	max-width: 200px;
 	white-space: nowrap;
 	overflow: hidden;
-	
+
 	text-overflow: ellipsis;
+}
+.chooseSteps .step.disabled .button {
+	cursor: default;
 }
 .chooseSteps .step.disabled .choose-button {
 	border-radius: 0;
 	background: none;
 	box-shadow: 0 0 0;
 	cursor: default;
-	
+
 	color: #b8b8b8;
 }
 .chooseSteps .step .divider {
@@ -95,7 +98,7 @@
 .chooseSteps .step.done .legend {
 	background-image: url(../i/i.png);
 	background-position: right 0;
-	
+
 	text-indent: -99999px;
 }
 .chooseSteps .step.done .divider {
@@ -105,7 +108,7 @@
 	top: 0;
 	left: 50%;
 	margin: -170px 0 0 -170px;
-	
+
 	display: none;
 	border-radius: 5px;
 	background: #fbfbfb;
@@ -123,11 +126,11 @@
 .chooseSteps .popup .f-search {
 	position: relative;
 	margin: 0 -5px 15px;
-	
+
 	border: 1px solid #ccc;
 	border-radius: 15px;
 	background: #fff;
-	
+
 	padding: 10px 10px 10px 35px;
 }
 .chooseSteps .popup .f-search .i {
@@ -141,8 +144,8 @@
 	background: none;
 	width: 100%;
 	height: auto;
-	
-	
+
+
 	font: 14px trebuchet ms;
 }
 .chooseSteps .popup ul {}
@@ -156,7 +159,7 @@
 	border-radius: 13px;
 	padding: 0 10px;
 	cursor: pointer;
-	
+
 	font-size: 16px;
 	line-height: 25px;
 }
@@ -165,7 +168,7 @@
 	background: -webkit-gradient(linear, left top, #2691ff, #3378ff);
 	background: -moz-linear-gradient(top, #2691ff, #3378ff);
 	background: linear-gradient(top, #2691ff, #3378ff);
-	
+
 	color: #fff;
 }
 .chooseSteps .popup ul li img {
@@ -188,7 +191,7 @@
 
 	font-size: 28px;
 	font-weight: normal;
-	
+
 	text-align: center;
 }
 .chooseSteps .buttons {
@@ -209,7 +212,7 @@
 }
 .carChooseStep h2 {
 	margin-bottom: 65px;
-	
+
 	text-align: center;
 }
 .carChooseStep.step1 .l-col,
@@ -240,7 +243,7 @@
 }
 .carChooseStep.step1 fieldset .l-col {
 	width: 140px;
-	
+
 	text-align: right;
 }
 .carChooseStep fieldset b {
@@ -282,7 +285,7 @@
 	width: 368px;
 	height: 35px;
 	padding: 0 15px;
-	
+
 	font-size: 17px;
 	line-height: 35px;
 }
@@ -291,9 +294,9 @@
 	top: 0;
 	right: 100%;
 	margin: 0 20px 0 0;
-	
+
 	white-space: nowrap;
-	
+
 	line-height: 37px;
 }
 .carChooseStep.step2 .personalData {
@@ -302,9 +305,9 @@
 .carChooseStep.step2 .phone .input-box {
 	position: relative;
 	margin: 0 0 0 10px;
-	
+
 	display: inline-block;
-	
+
 	line-height: 37px;
 }
 .carChooseStep.step2 .phone .input-box .hint {
@@ -320,7 +323,7 @@
 	position: absolute;
 	top: 0;
 	left: 10px;
-	
+
 	color: #bfbfbf;
 	line-height: 37px;
 }
@@ -337,7 +340,7 @@
 	padding: 20px 0;
 	background: #fffbcc;
 	box-shadow: 0 1px 1px #9f9850;
-	
+
 	font-size: 17px;
 
 	text-align: center;
@@ -347,11 +350,11 @@
 }
 .carChooseStep.step2 .captcha input {
 	vertical-align: middle;
-	
+
 	width: 110px;
 	height: 36px;
 	padding: 0 10px;
-	
+
 	line-height: 36px;
 }
 /* carChooseStep (end) */

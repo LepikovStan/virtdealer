@@ -1,87 +1,82 @@
-﻿<div class="carChoose">
+﻿<div class="carChoose" ng-controller="CarChooseCtrl">
 	<h1>Купите машину на своих условиях</h1>
 	<form class="chooseSteps" id="carChoose">
-		<div class="step">
+		<div class="{{step1class}}">
 			<div class="legend">1</div>
-			<span class="button button-size-m">Выбрать марку</span>
+			<span class="button button-size-m" ng-click="openChooseBrandPopup($event)">{{carBrandTitle}}</span>
 			<div class="divider"></div>
-
 			<div class="popup">
 				<h3>Выберите марку</h3>
 				<div class="f-search">
 					<i class="i search"></i>
-					<input type="text" value="" />
+					<input type="text" ng-model="filterCarBrand.name" value="" />
 				</div>
 				<ul class="carmake">
-					<li data-val="Acura"><img src="i/tmp/i.auto.alfaromeo.png" alt="" />Acura</li>
-					<li data-val="Alfa Romeo"><img src="i/tmp/i.auto.alfaromeo.png" alt="" />Alfa Romeo</li>
-					<li data-val="Aston Martin"><img src="i/tmp/i.auto.astonmartin.png" alt="" />Aston Martin</li>
-					<li data-val="Audi"><img src="i/tmp/i.auto.alfaromeo.png" alt="" />Audi</li>
-				</ul>
-				<ul class="carmake">
-					<li data-val="Acura"><img src="i/tmp/i.auto.alfaromeo.png" alt="" />Acura</li>
-					<li data-val="Alfa Romeo"><img src="i/tmp/i.auto.alfaromeo.png" alt="" />Alfa Romeo</li>
-					<li data-val="Aston Martin"><img src="i/tmp/i.auto.alfaromeo.png" alt="" />Aston Martin</li>
-					<li data-val="Audi"><img src="i/tmp/i.auto.alfaromeo.png" alt="" />Audi</li>
+					<li
+						ng-repeat="carBrand in carBrands | filter:filterCarBrand"
+						ng-click="chooseBrand($event)"
+						data-val="{{carBrand.id}}"
+						data-name="{{carBrand.name}}">
+						<img src="{{carBrand.icon}}" alt="" />{{carBrand.name}}
+					</li>
 				</ul>
 			</div>
-			<input type="hidden" value="" name="" />
+			<input type="hidden" value="{{carBrandId}}" name="" />
 		</div>
-		<div class="step disabled">
+		<div class="{{step2class}}">
 			<div class="legend">2</div>
-			<span class="button button-size-m">Выбрать модель</span>
+			<span class="button button-size-m" ng-click="openChooseModelPopup($event)">{{carMakeTitle}}</span>
 			<div class="divider"></div>
 
 			<div class="popup">
-				<h2>BMW</h2>
-				<h3>Выберите модель</h3>
+				<h2>{{carBrandTitle}}</h2>
+				<h3>{{carMakeTitle}}</h3>
 				<div class="f-search">
 					<i class="i search"></i>
-					<input type="text" value="" />
+					<input type="text" ng-model="filterCarMake.name" value="" />
 				</div>
 				<ul>
-					<li class="optName">1 серия</li>
-					<li data-val="116">116</li>
-					<li data-val="117">117</li>
-					<li data-val="118">118</li>
-					<li data-val="111">111</li>
-					<li data-val="119">119</li>
-				</ul>
-				<ul>
-					<li class="optName">3 серия</li>
-					<li data-val="311">311</li>
-					<li data-val="312">312</li>
-					<li data-val="313">313</li>
+					<li
+						ng-repeat="carMake in carMakes | filter:filterCarMake"
+						ng-click="chooseMake($event)"
+						data-val="{{carMake.id}}",
+						data-name="{{carMake.name}}">
+						{{carMake.name}}
+					</li>
 				</ul>
 			</div>
-			<input type="hidden" value="" name="" />
+			<input type="hidden" value="{{carMakeId}}" name="" />
 		</div>
-		<div class="step disabled">
+		<div class="{{step3class}}">
 			<div class="legend">3</div>
-			<span class="button button-size-m">Выбрать регион</span>
+			<span class="button button-size-m" ng-click="openChooseRegionPopup($event)">{{carRegionTitle}}</span>
 
 			<div class="popup">
 				<h3>Выберите регион</h3>
 				<div class="f-search">
 					<i class="i search"></i>
-					<input type="text" value="" />
+					<input type="text" ng-model="regionFilter.name" value="" />
 				</div>
 				<ul>
-					<li data-val="msc"><b>Москва</b></li>
-					<li data-val="mscr"><b>Московская область</b></li>
-					<li data-val="spb"><b>Санкт-Петербург</b></li>
-					<li data-val="spbr"><b>Ленинградская область</b></li>
+					<li
+						ng-repeat="region in regionsMain | filter:regionFilter"
+						ng-click="chooseRegion($event)"
+						data-val="{{region.id}}"
+						data-name="{{region.name}}">
+						<b>{{region.name}}</b>
+					</li>
 				</ul>
 				<ul>
-					<li data-val="adyg">Республика Адыгея</li>
-					<li data-val="basc">Республика Башкортостан</li>
-					<li data-val="bur">Республика Бурятия</li>
-					<li data-val="dag">Республика Дагестан</li>
-					<li data-val="ing">Ингушетия</li>
-					<li data-val="kbr">Кабардино-Балкарская Республика</li>
+					<li
+						ng-repeat="region in regions | filter:regionFilter"
+						ng-click="chooseRegion($event)"
+						data-val="{{region.id}}"
+						data-name="{{region.name}}">
+						{{region.name}}
+					</li>
 				</ul>
 			</div>
-			<input type="hidden" value="" name="" />
+			<input type="hidden" value="{{carRegionId}}" name="" />
 		</div>
 		<div class="buttons">
 			<input type="submit" class="b-button b-button-size-m" value="Продолжить" />
