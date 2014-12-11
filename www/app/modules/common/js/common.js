@@ -11,23 +11,32 @@ var myApp = angular
                 templateUrl: 'app/modules/common/templates/main.htm',
                 //controller: 'MainCtrl'
             })
+            .when('/login', {
+                templateUrl: 'app/modules/common/templates/login.htm',
+                //controller: 'MainCtrl'
+            })
             .when('/askquestion', {
                 templateUrl: 'app/modules/common/templates/askquestion.htm',
                 //controller: 'MainCtrl'
             });
+
 }]);
 
 /* Controllers */
 myApp.controller('MainCtrl',
-    function($scope, $location) {
+    function($scope, $location, $route) {
+        console.log('$route', $route)
+        //$locationProvider.html5mode(true);
         var tmpl = [
                 'header',
                 'carchoose',
                 'comments',
-                'footer'
+                'footer',
+                'login'
             ],
             title = {
-                '/': 'virtdealer'
+                '/': 'virtdealer',
+                '/login': 'virtdealer - login'
             };
 
         angular.extend($scope, {

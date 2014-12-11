@@ -11,6 +11,10 @@ var myApp = angular
                 templateUrl: 'app/modules/common/templates/main.htm',
                 //controller: 'MainCtrl'
             })
+            .when('/login', {
+                templateUrl: 'app/modules/common/templates/login.htm',
+                //controller: 'MainCtrl'
+            })
             .when('/askquestion', {
                 templateUrl: 'app/modules/common/templates/askquestion.htm',
                 //controller: 'MainCtrl'
@@ -24,10 +28,12 @@ myApp.controller('MainCtrl',
                 'header',
                 'carchoose',
                 'comments',
-                'footer'
+                'footer',
+                'login'
             ],
             title = {
-                '/': 'virtdealer'
+                '/': 'virtdealer',
+                '/login': 'virtdealer - login'
             };
 
         angular.extend($scope, {

@@ -86,7 +86,13 @@ module.exports = function (grunt) {
 						'app/css/sertificate.css'
 						'app/css/brands.css'
 						*/
-					]
+					],
+                    'app/dest/css/_login.css': [
+                        'app/modules/common/css/common.css',
+                        'app/modules/header/css/header.css',
+                        'app/modules/login/css/login.css',
+                        'app/modules/footer/css/footer.css'
+                    ]
 				}
             }
         },
